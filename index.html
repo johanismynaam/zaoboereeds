@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reeds on the Ridge | Handmade Oboe Reeds, Delivered in South Africa</title>
+  <meta name="description" content="Order handmade oboe reeds online, delivered anywhere in South Africa." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div>
+        <p class="site-title">Reeds on the Ridge</p>
+        <p class="site-tagline">Handmade reeds, delivered across South Africa</p>
+      </div>
+      <nav>
+        <a href="#shop">Shop</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#order">Order</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Quality oboe reeds, made by hand</h1>
+    <p>Browse available reed types below, choose your strength, and place your order. I'll confirm payment and delivery details with you directly.</p>
+    <p><a class="btn btn-primary" href="#shop">Shop Reeds</a></p>
+  </section>
+
+  <section id="shop">
+    <h2>Available Reeds</h2>
+    <p class="section-intro">All prices in ZAR. Collect for free in Pretoria, or get it Postnet-to-Postnet for R109 (South Africa only).</p>
+    <div class="grid" id="product-grid"></div>
+  </section>
+
+  <section id="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div>
+        <div class="step-number">1</div>
+        <p><strong>Choose your reed</strong><br />Pick a reed type and strength below.</p>
+      </div>
+      <div>
+        <div class="step-number">2</div>
+        <p><strong>Submit your order</strong><br />Fill in the order form with your details.</p>
+      </div>
+      <div>
+        <div class="step-number">3</div>
+        <p><strong>Confirm &amp; pay</strong><br />I'll contact you to confirm your order, then a 70% deposit is payable by EFT or cash.</p>
+      </div>
+      <div>
+        <div class="step-number">4</div>
+        <p><strong>Delivery</strong><br />Collect in Pretoria, or get it sent Postnet-to-Postnet.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="top-notice">
+    All reeds are <strong>unwired by default</strong>. If you'd like a reed wired, select "Wired" for that reed when adding it to your order.
+  </div>
+
+  <section id="order" class="order-section">
+    <h2>Place Your Order</h2>
+    <p class="section-intro">Add as many reeds as you like to your order below, then fill in your details once at the bottom.</p>
+
+    <form class="order-form" id="order-form" action="https://formspree.io/f/xeagzvjr" method="POST">
+      <input type="hidden" name="_subject" value="New oboe reed order" />
+      <input type="text" name="_gotcha" style="display:none" />
+
+      <h3>1. Add reeds to your order</h3>
+
+      <div class="form-row-split">
+        <div class="form-row">
+          <label for="reed-type">Reed type</label>
+          <select id="reed-type"></select>
+        </div>
+        <div class="form-row">
+          <label for="strength">Strength</label>
+          <select id="strength"></select>
+        </div>
+      </div>
+
+      <div class="form-row-split">
+        <div class="form-row">
+          <label for="wiring">Wiring</label>
+          <select id="wiring"></select>
+        </div>
+        <div class="form-row">
+          <label for="quantity">Quantity</label>
+          <input type="number" id="quantity" min="1" value="1" />
+        </div>
+      </div>
+
+      <p><button type="button" class="btn btn-secondary" id="add-item-btn">Add to Order</button></p>
+
+      <div id="basket-empty" class="form-note">No reeds added yet — use "Add to Order" above.</div>
+      <div id="basket-list" class="basket-list"></div>
+
+      <h3>2. Your details</h3>
+
+      <div class="form-row">
+        <label for="customer-name">Full name</label>
+        <input type="text" id="customer-name" name="Name" required />
+      </div>
+
+      <div class="form-row-split">
+        <div class="form-row">
+          <label for="customer-email">Email</label>
+          <input type="email" id="customer-email" name="Email" required />
+        </div>
+        <div class="form-row">
+          <label for="customer-phone">Phone</label>
+          <input type="tel" id="customer-phone" name="Phone" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="shipping-method">Collection / shipping</label>
+        <select id="shipping-method" name="Shipping Method"></select>
+        <p class="form-note">Pickup and Postnet-to-Postnet are available for orders within South Africa only. If you're ordering from elsewhere in the SADC region, please <a href="mailto:johanismynaam@gmail.com">email me first</a> to confirm shipping options and cost before placing your order.</p>
+      </div>
+
+      <div class="form-row">
+        <label for="customer-address">Postnet branch / delivery address (leave blank if collecting in Pretoria)</label>
+        <textarea id="customer-address" name="Delivery Address" rows="3"></textarea>
+      </div>
+
+      <div class="form-row">
+        <label for="play-location">Where will you mostly play?</label>
+        <select id="play-location" name="Play Location">
+          <option value="Inland (highveld / high altitude)">Inland (highveld / high altitude)</option>
+          <option value="Coast (sea level)">Coast (sea level)</option>
+        </select>
+        <p class="form-note">Altitude affects how a reed responds, so this helps me set it up to play well where you are.</p>
+      </div>
+
+      <div class="form-row">
+        <label for="payment-method">Payment method</label>
+        <select id="payment-method" name="Payment Method"></select>
+        <p class="form-note">I accept EFT or cash only (no SnapScan or Zapper). Cash payments receive a 5% discount on the reed total.</p>
+      </div>
+
+      <div class="form-row">
+        <label for="notes">Notes (optional)</label>
+        <textarea id="notes" name="Notes" rows="2" placeholder="Any preferences or questions?"></textarea>
+      </div>
+
+      <div class="order-summary">
+        <div><span>Subtotal</span><span id="summary-subtotal"></span></div>
+        <div id="summary-discount-row"><span>Cash discount (5%)</span><span id="summary-discount"></span></div>
+        <div><span>Shipping</span><span id="summary-shipping"></span></div>
+        <div class="total"><span>Estimated total</span><span id="summary-total"></span></div>
+      </div>
+
+      <input type="hidden" id="order-items-field" name="Order Items" />
+      <input type="hidden" id="order-subtotal-field" name="Subtotal" />
+      <input type="hidden" id="order-discount-field" name="Cash Discount" />
+      <input type="hidden" id="order-shipping-field" name="Shipping Fee" />
+      <input type="hidden" id="order-total-field" name="Estimated Total" />
+
+      <p class="form-note">This is an order request, not a payment. I'll contact you by email or phone to confirm availability, final cost, and payment options.</p>
+
+      <div class="order-terms">
+        <strong>Payment &amp; delivery terms</strong>
+        <ul>
+          <li>A 70% deposit is payable once your order is confirmed.</li>
+          <li>Reeds are made and shipped within two weeks of the deposit being confirmed.</li>
+          <li>Final dispatch only happens once full payment has cleared.</li>
+          <li>Orders cancelled before shipping are refunded at 75% of the total amount paid.</li>
+        </ul>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit Order</button>
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p class="section-intro">Questions before ordering? Reach out directly.</p>
+    <p style="text-align:center;">
+      Email: <a href="mailto:johanismynaam@gmail.com">johanismynaam@gmail.com</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Reeds on the Ridge. All rights reserved.</p>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
