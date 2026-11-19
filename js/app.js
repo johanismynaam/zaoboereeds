@@ -180,6 +180,7 @@ function handleFormSubmit(event) {
   const discount = isCash ? subtotal * CASH_DISCOUNT_RATE : 0;
   const total = subtotal - discount + shippingOption.fee;
 
+  document.getElementById("order-replyto-field").value = document.getElementById("customer-email").value;
   document.getElementById("order-items-field").value = buildOrderItemsText();
   document.getElementById("order-subtotal-field").value = "R" + subtotal.toFixed(2);
   document.getElementById("order-discount-field").value = "R" + discount.toFixed(2);

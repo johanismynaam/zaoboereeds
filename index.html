@@ -11,13 +11,18 @@
 
   <header class="site-header">
     <div class="header-inner">
-      <div>
-        <p class="site-title">Reeds on the Ridge</p>
-        <p class="site-tagline">Handmade reeds, delivered across South Africa</p>
+      <div class="brand">
+        <img src="assets/logo.svg" alt="" class="site-logo" />
+        <div>
+          <p class="site-title">Reeds on the Ridge</p>
+          <p class="site-tagline">Handmade reeds, delivered across South Africa</p>
+        </div>
       </div>
       <nav>
         <a href="#shop">Shop</a>
+        <a href="#about">About</a>
         <a href="#how-it-works">How It Works</a>
+        <a href="#testimonials">Testimonials</a>
         <a href="#order">Order</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -28,6 +33,31 @@
     <h1>Quality oboe reeds, made by hand</h1>
     <p>Browse available reed types below, choose your strength, and place your order. I'll confirm payment and delivery details with you directly.</p>
     <p><a class="btn btn-primary" href="#shop">Shop Reeds</a></p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-layout">
+      <!--
+        SETUP NOTE: add your own photo at assets/profile.jpg (square-ish works best,
+        at least 400x400px). If no file is present here, the circle below will just
+        stay empty, so the rest of the page is unaffected either way.
+      -->
+      <img src="assets/profile.jpg" alt="Photo of the reed maker" class="about-photo" onerror="this.style.display='none'" />
+      <div class="about-text">
+        <p>
+          I'm Johan Ferreira — principal oboe with the Johannesburg Philharmonic Orchestra, and guest principal
+          oboe with the Free State Symphony and the Mzansi National Philharmonic Orchestras. I studied under
+          Gary Roberts in Johannesburg and Jenny Johnson of the Christchurch Symphony in New Zealand, and I'm
+          proud to be a <a href="https://www.howarthlondon.com/artists_cpt/johan-ferreira/" target="_blank" rel="noopener">Howarth Artist</a>.
+        </p>
+        <p>
+          I perform regularly as a symphonic and chamber musician around South Africa, and that stage experience
+          shapes every reed I make. I know exactly what a reed needs to hold up through a rehearsal, a broadcast,
+          or a demanding concert programme — because I'm the one playing it.
+        </p>
+      </div>
+    </div>
   </section>
 
   <section id="shop">
@@ -58,6 +88,25 @@
     </div>
   </section>
 
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <!--
+      SETUP NOTE: once you have real testimonials, delete the "no testimonials yet"
+      paragraph below and copy/paste the commented-out example card for each one,
+      filling in the quote and the person's name (and role, if useful, e.g. "Youth
+      orchestra member").
+    -->
+    <p class="section-intro">No testimonials yet — check back soon!</p>
+    <div class="grid">
+      <!--
+      <article class="card">
+        <p class="card-desc">"Quote from a happy customer goes here."</p>
+        <p class="card-price">— Customer Name</p>
+      </article>
+      -->
+    </div>
+  </section>
+
   <div class="top-notice">
     All reeds are <strong>unwired by default</strong>. If you'd like a reed wired, select "Wired" for that reed when adding it to your order.
   </div>
@@ -68,6 +117,7 @@
 
     <form class="order-form" id="order-form" action="https://formspree.io/f/xeagzvjr" method="POST">
       <input type="hidden" name="_subject" value="New oboe reed order" />
+      <input type="hidden" name="_replyto" id="order-replyto-field" />
       <input type="text" name="_gotcha" style="display:none" />
 
       <h3>1. Add reeds to your order</h3>

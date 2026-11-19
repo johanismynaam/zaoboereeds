@@ -1,11 +1,11 @@
 :root {
-  --color-bg: #faf7f2;
+  --color-bg: #f5f4ea;
   --color-surface: #ffffff;
-  --color-text: #2b2420;
-  --color-muted: #6b5f55;
-  --color-accent: #7a3b2e;
-  --color-accent-dark: #5c2b21;
-  --color-border: #e5ddd3;
+  --color-text: #272a1e;
+  --color-muted: #666b52;
+  --color-accent: #4f5d30;
+  --color-accent-dark: #343d1f;
+  --color-border: #dcd8c3;
   --radius: 10px;
   --max-width: 1000px;
   font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -38,6 +38,19 @@ header.site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.site-logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
 }
 
 .site-title {
@@ -105,6 +118,37 @@ section h2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
+}
+
+.about-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--color-border);
+  flex-shrink: 0;
+}
+
+.about-text {
+  max-width: 560px;
+  min-width: 0;
+  color: var(--color-muted);
+}
+
+.about-text p {
+  margin: 0 0 1rem;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
 }
 
 .card {
