@@ -32,7 +32,7 @@ const PRODUCTS = [
   {
     id: "refurbished",
     name: "Refurbished Reed",
-    description: "Previously played by me in concerts and symphony performances, then cleaned, lightly dusted, resealed, and fully played in. Ideal for young students or youth orchestras. Subject to availability.",
+    description: "Previously played by me in concerts and symphony performances, then cleaned, lightly dusted, resealed, and fully played in. Ideal for youth orchestras and enthusiastic amateur adults, or the occasional player. Subject to availability.",
     price: 220,
     strengths: ["As available"]
   }
